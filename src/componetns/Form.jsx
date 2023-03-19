@@ -28,7 +28,7 @@ function MyForm() {
   }
 
   return (
-    <form>
+    <form name='mensaje' method='POST' netlify>
       {formValues.map((formValue, index) => (
         <div key={index} className='form'>
           <div className='row'>
@@ -101,6 +101,7 @@ function MyForm() {
         cols='30'
         rows='7'
         onChange={(e) => setMessage(e.target.value)}
+        value={message}
       />
       <button
         type='submit'

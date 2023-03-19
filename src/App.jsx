@@ -114,7 +114,7 @@ function App() {
       <section className='intro'>
         <h3 className={`text ${displayText && 'show'}`}>
           {' '}
-          Desués de estos años de maravillosa convivencia
+          Después de estos años de maravillosa convivencia
           queremos dar un paso más...
         </h3>
         <h2
