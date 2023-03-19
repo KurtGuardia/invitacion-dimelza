@@ -1,0 +1,106 @@
+@use './mixins';
+
+html {
+    //This sets the default font-size from 16px to 10px
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: montserratextralight,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(223.47deg,
+            #fce6b7 2.84%,
+            #fce6b7 15.54%,
+            rgba(252, 230, 183, 0.941079) 22.98%,
+            rgba(252, 230, 183, 0.856602) 39.53%,
+            rgba(252, 230, 183, 0.193226) 59.44%,
+            rgba(252, 230, 183, 0.097734) 66.96%,
+            rgba(252, 230, 183, 0.0354836) 87.77%,
+            rgba(252, 230, 183, 0) 98.41%);
+    color: rgb(109, 108, 108);
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #fce6b7;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #ff971f;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #6b92ff;
+    }
+
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas,
+            'Courier New', monospace;
+    }
+
+
+    h3,
+    h2,
+    p,
+    a,
+    li {
+        margin: auto;
+        width: fit-content;
+    }
+
+    span,
+    h3 {
+        font-size: 5rem;
+    }
+
+    h3 {
+        margin-top: 25rem;
+    }
+
+    h2 {
+        font-size: 8rem;
+        font-style: italic;
+        letter-spacing: 5px;
+    }
+
+    p,
+    a,
+    select,
+    option,
+    button {
+        letter-spacing: 3px;
+        line-height: 5rem;
+        color: inherit;
+        font-size: 3rem;
+    }
+
+    input,
+    small {
+        font-size: 2.6rem;
+    }
+
+    @font-face {
+        font-family: 'sophia_martiniregular';
+        src: url('../fonts/sophia_martini-webfont.woff2') format('woff2'),
+            url('../fonts/sophia_martini-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'montserratextralight';
+        src: url('../fonts/montserrat-extralight-webfont.woff2') format('woff2'),
+            url('../fonts/montserrat-extralight-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+}

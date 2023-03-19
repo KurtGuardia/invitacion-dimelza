@@ -1,0 +1,276 @@
+@use './scss/mixins';
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.App {
+    margin: auto;
+    overflow-x: hidden;
+
+    @include mixins.respond(tab-land) {
+        &>*:not(.sorry) {
+            display: none !important;
+        }
+    }
+
+    & .hero {
+        display: flex;
+        width: 100%;
+        justify-content: stretch;
+        margin-bottom: 10rem;
+        position: relative;
+
+        & .container {
+            @include mixins.flexCenter;
+            transform: translateY(-10rem);
+            gap: 5rem;
+            width: 100%;
+
+            & .craspedia {
+                height: 40rem;
+                width: auto;
+                animation-name: bounce;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+            }
+
+            & .fecha {
+                padding: 1.5rem 2.5rem;
+                font-weight: 500;
+                letter-spacing: 3px;
+                border: 15px double #fcc4b7;
+            }
+
+            & .nombres {
+                @include mixins.flexCenter;
+                font-family: 'sophia_martiniregular';
+                font-size: 6rem;
+                letter-spacing: 10px;
+                text-align: center;
+
+                & span {
+                    line-height: 11rem;
+                    transform: translateY(-4rem);
+                }
+            }
+        }
+
+        &__line {
+            position: absolute;
+            left: -7rem;
+            bottom: -31rem;
+            width: 105%
+        }
+    }
+
+    & .intro {
+        @include mixins.flexCenter;
+        gap: 30rem;
+        width: 95rem;
+        margin: auto;
+        padding: 15rem 0;
+        font-size: 5rem;
+        text-align: center;
+        position: relative;
+
+        & .text,
+        & .invitacion {
+            height: 25rem;
+        }
+
+        & .text {
+            opacity: 0;
+            width: 100%;
+            padding: 2rem 3rem;
+            border: 2.5rem outset #c4b7fc;
+            transition: all 2.5s ease;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        & .noticia {
+            opacity: 0;
+            transition: all 2.5s ease;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        & .invitacion {
+            opacity: 0;
+            width: 100%;
+            padding: 2rem 3rem;
+            margin-top: 0;
+            border: 2.5rem outset #fcc4b7;
+            transition: all 1s ease;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+
+    & .conteo {
+        position: relative;
+        width: 40%;
+        height: 70rem;
+        margin: 15rem auto;
+        @include mixins.flexCenter;
+        font-family: 'sophia_martiniregular';
+
+        & .faltan {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+
+        & .num,
+        & .dias {
+            letter-spacing: .5rem;
+        }
+
+        & .num {
+            font-family: 'montserratextralight';
+            margin-bottom: .5rem;
+        }
+
+
+        & .dias {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        & .rosca {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    & .lugar {
+        padding: 5rem 5rem;
+        width: 70vw;
+        margin: auto;
+        position: relative;
+
+        &>*,
+        &>*>* {
+            text-align: center;
+            display: block;
+            padding: 1rem 0;
+        }
+
+        & .video {
+            margin: 5rem auto;
+        }
+
+        & .map {
+            margin: auto;
+        }
+
+        & h2 {
+            color: #ff9d2ede;
+            font-family: 'sophia_martiniregular';
+            letter-spacing: 20px;
+            margin: auto;
+        }
+
+        & a {
+            margin-top: 8rem;
+        }
+
+        .mancha {
+            top: 70%
+        }
+    }
+
+    & .formulario form {
+        @include mixins.flexCenter;
+    }
+
+    & footer {
+        border-top: 1px solid #c4b7fc;
+        margin-top: 20rem;
+
+        & p {
+            font-size: 2rem;
+        }
+    }
+
+    .mancha {
+        &--left {
+            position: absolute;
+            left: 70%;
+            top: -70%;
+        }
+
+        &--right {
+            position: absolute;
+            right: 80%;
+            top: 10%;
+            height: 80%;
+            opacity: .5;
+        }
+    }
+
+    .sorry {
+        @include mixins.flexCenter;
+        width: 65%;
+        text-align: center;
+        line-height: 8rem;
+        font-size: 5rem;
+        margin: auto;
+        height: 100vh;
+
+        @include mixins.respond(big-phone) {
+            line-height: 5rem;
+            font-size: 3rem;
+        }
+    }
+
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(to right, #ffb7a7, #ffc996);
+        opacity: 1;
+        position: fixed;
+        z-index: 10;
+        @include mixins.flexCenter;
+
+        & h3 {
+            margin: 5rem;
+        }
+
+        & .buttons {
+            &>* {
+                cursor: pointer;
+                font-size: 4rem;
+                font-family: 'sophia_martiniregular';
+                font-weight: bold;
+                margin: 0 2rem;
+                padding: 5rem;
+                border-radius: 1.5rem;
+                background-image: linear-gradient(to left, #ffc996, #ffc996a4);
+                transition: all .5s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
