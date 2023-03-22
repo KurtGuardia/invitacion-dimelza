@@ -8,15 +8,7 @@ html {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(223.47deg,
-            #fce6b7 2.84%,
-            #fce6b7 15.54%,
-            rgba(252, 230, 183, 0.941079) 22.98%,
-            rgba(252, 230, 183, 0.856602) 39.53%,
-            rgba(252, 230, 183, 0.193226) 59.44%,
-            rgba(252, 230, 183, 0.097734) 66.96%,
-            rgba(252, 230, 183, 0.0354836) 87.77%,
-            rgba(252, 230, 183, 0) 98.41%);
+    background: linear-gradient(201.78deg, rgba(252, 230, 183, 0) 27.67%, rgba(252, 230, 183, 0.64) 164.32%);
     color: rgb(109, 108, 108);
 
     /* width */
@@ -51,16 +43,11 @@ html {
     a,
     li {
         margin: auto;
-        width: fit-content;
     }
 
     span,
     h3 {
         font-size: 5rem;
-    }
-
-    h3 {
-        margin-top: 25rem;
     }
 
     h2 {

@@ -11,12 +11,10 @@
         justify-content: space-between;
         gap: 4rem;
         margin: auto;
-        width: 90%;
 
         &__input {
             border-bottom: 5px double #fbde9f;
             padding: .5rem 1rem;
-            width: 100%;
 
             &::placeholder {
                 opacity: .3;
@@ -69,8 +67,7 @@
 
     &__textarea {
         margin: 8rem auto;
-        background-image: linear-gradient(291.75deg, #FCE6B7 -49.41%, #F8EED7 16.92%, #F8EFDE 55.83%, rgba(247, 239, 220, 0) 89.05%);
-        width: 60%;
+        background: linear-gradient(15.78deg, rgba(255, 255, 255, 0.764) 27.67%, rgb(252, 230, 183) 164.32%);
         padding: 3rem;
         font-size: 3rem;
         border-radius: 3rem;

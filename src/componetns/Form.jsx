@@ -28,88 +28,102 @@ function MyForm() {
   }
 
   return (
-    <form name='mensaje' method='POST' netlify>
-      {formValues.map((formValue, index) => (
-        <div key={index} className='form'>
-          <div className='row'>
-            <input
-              name='name'
-              autoComplete='off'
-              className='row__input'
-              type='text'
-              value={formValue.name}
-              onChange={(e) => handleChange(e, index)}
-              placeholder='Nombre'
-            />
-            <input
-              name='email'
-              autoComplete='off'
-              className='row__input'
-              type='email'
-              value={formValue.email}
-              onChange={(e) => handleChange(e, index)}
-              placeholder='Email'
-            />
-            <select
-              className='row__select'
-              name='menu'
-              value={formValue.menu}
-              onChange={(e) => handleChange(e, index)}
-            >
-              <option value=''>Selecciona tu menú</option>
-              <option value='normal'>Normal</option>
-              <option value='veg'>Vegetariano</option>
-              <option value='celiaco'>Celicao</option>
-              <option value='inf'>Infantil</option>
-            </select>
-            <input
-              name='allergies'
-              autoComplete='off'
-              className='row__input'
-              type='text'
-              value={formValue.allergies}
-              onChange={(e) => handleChange(e, index)}
-              placeholder='¿Alergias o intolerancias?'
-            />
-
-            {index === formValues.length - 1 && (
-              <button
-                className='form__button--add form__button'
-                type='button'
-                onClick={handleAddClick}
-              >
-                +
-              </button>
-            )}
-            {index !== formValues.length - 1 && (
-              <button
-                className='row__button--del'
-                type='button'
-                onClick={() => handleRemoveClick(index)}
-              >
-                {index !== formValues.length - 1 && '🗑️'}
-              </button>
-            )}
-          </div>
-        </div>
-      ))}
-      <textarea
-        className='form__textarea'
-        placeholder='Mensaje'
-        name='message'
-        id='message'
-        cols='30'
-        rows='7'
-        onChange={(e) => setMessage(e.target.value)}
-        value={message}
-      />
-      <button
-        type='submit'
-        className='form__button--send form__button'
+    <>
+      <form
+        name='mensaje'
+        netlify
+        netlify-honeypot='bot-field'
+        hidden
       >
-        Enviar
-      </button>
-    </form>
+        <input type='text' name='name' />
+        <input type='text' name='allergies' />
+        <input type='email' name='email' />
+        <select name='menu'></select>
+        <textarea name='message'></textarea>
+      </form>
+      <form name='mensaje' method='POST' netlify>
+        {formValues.map((formValue, index) => (
+          <div key={index} className='form'>
+            <div className='row'>
+              <input
+                name='name'
+                autoComplete='off'
+                className='row__input'
+                type='text'
+                value={formValue.name}
+                onChange={(e) => handleChange(e, index)}
+                placeholder='Nombre'
+              />
+              <input
+                name='email'
+                autoComplete='off'
+                className='row__input'
+                type='email'
+                value={formValue.email}
+                onChange={(e) => handleChange(e, index)}
+                placeholder='Email'
+              />
+              <select
+                className='row__select'
+                name='menu'
+                value={formValue.menu}
+                onChange={(e) => handleChange(e, index)}
+              >
+                <option value=''>Selecciona tu menú</option>
+                <option value='normal'>Normal</option>
+                <option value='veg'>Vegetariano</option>
+                <option value='celiaco'>Celicao</option>
+                <option value='inf'>Infantil</option>
+              </select>
+              <input
+                name='allergies'
+                autoComplete='off'
+                className='row__input'
+                type='text'
+                value={formValue.allergies}
+                onChange={(e) => handleChange(e, index)}
+                placeholder='¿Alergias o intolerancias?'
+              />
+
+              {index === formValues.length - 1 && (
+                <button
+                  className='form__button--add form__button'
+                  type='button'
+                  onClick={handleAddClick}
+                >
+                  +
+                </button>
+              )}
+              {index !== formValues.length - 1 && (
+                <button
+                  className='row__button--del'
+                  type='button'
+                  onClick={() => handleRemoveClick(index)}
+                >
+                  {index !== formValues.length - 1 && '🗑️'}
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+        <textarea
+          className='form__textarea'
+          placeholder='Mensaje'
+          name='message'
+          id='message'
+          cols='30'
+          rows='7'
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
+        />
+        <button
+          type='submit'
+          className='form__button--send form__button'
+        >
+          Enviar
+        </button>
+      </form>
+    </>
   )
 }
 
