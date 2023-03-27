@@ -21,7 +21,7 @@ function MyForm() {
   // }
 
   return (
-    <form name='confirmacion' method='POST'>
+    <form method='POST'>
       {/* <div className='row'> */}
       <input
         type='hidden'
