@@ -21,12 +21,12 @@ function MyForm() {
   // }
 
   return (
-    <form method='POST'>
+    <form method='POST' action='/success'>
       {/* <div className='row'> */}
       <input
         type='hidden'
         value='confirmacion'
-        name='formulario'
+        name='form-name'
       />
       <input
         required
