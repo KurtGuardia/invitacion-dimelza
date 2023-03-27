@@ -23,31 +23,61 @@
         width: 100%;
         justify-content: stretch;
         position: relative;
+        gap: 7rem;
+        text-align: center;
+
+        & .fecha{
+            border: 7px double #ff971f;
+            padding: .5rem;
+            font-size: 2rem
+        }
 
         & .nombres {
             @include mixins.flexCenter;
             font-family: 'sophia_martiniregular';
-            font-size: 6rem;
+            font-size: 3rem;
+            font-weight: bold;
             letter-spacing: 10px;
             text-align: center;
+            margin-bottom: 8rem;
 
             & span {
-                line-height: 11rem;
-                transform: translateY(-4rem);
+                transform: translateY(-2rem);
             }
         }
 
+
     }
 
+    & .flor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: scaleX(-1);
+        width: 45%;
+
+        &.sec{
+            transform: scaleX(-1) scaleY(-1) rotate(-88deg) translateY(-23px) translateX(-21px);
+        }
+    }
+
+    & .mancha{
+        position: absolute;
+        top: 5rem;
+        right: 7rem;
+        transform: scaleX(-1);
+        width: 200%;
+    }
 
     & .conteo {
-        margin: 15rem auto;
+        margin: 7rem auto;
         @include mixins.flexCenter;
         font-family: 'sophia_martiniregular';
+        position: relative;
 
         & .faltan {
             letter-spacing: 1rem;
-            font-size: 5rem;
+            font-size: 3rem;
         }
 
         & .num,
@@ -58,41 +88,87 @@
         & .num {
             font-family: 'montserratextralight';
             margin-bottom: .5rem;
+            font-size: 4rem;
+            background-color: #ffd82844;
+            padding: 1rem;
+            border-radius: 8px;
         }
 
 
         & .dias {
-            font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        & .flor{
+            top: unset;
+            bottom: 0;
+            left: 50%;
+            transform: scaleX(1) translateY(5rem);
+            width: 30%;
+            height: 30%;
+            opacity: .7;
+
+            &__left{
+                left: 50%;
+                transform: scaleX(-1) translateY(5rem) translateX(100%);
+
+            }
         }
     }
 
     & .lugar {
-        margin: auto;
+        @include mixins.flexCenter;
+        gap: 5rem;
+        margin: 12rem auto;
         position: relative;
 
         &>*,
         &>*>* {
             text-align: center;
             display: block;
-            padding: 1rem 0;
         }
 
         & .map {
             margin: auto;
         }
+
+        & h3{
+            transform: translateY(2rem)
+        }
+
+        & .mancha{
+            left: 10rem;
+            opacity: .4;
+            z-index: -1;
+        }
     }
 
-    & .formulario form {
-        @include mixins.flexCenter;
+    & .formulario {
+        position: relative;
+
+        h3{
+            margin: auto;
+            width: fit-content
+        }
+
+        form {
+            @include mixins.flexCenter;
+        }
+
+        .mancha{
+            top: 100%;
+            transform: rotate(139deg) translateX(-41%) translateY(-8%);
+            z-index: -1;
+        }
     }
 
     & footer {
-        border-top: 1px solid #c4b7fc;
-        margin-top: 20rem;
+        border-top: 1px double #c4b7fc;
+        padding: 1rem;
+        text-align: center;
 
         & p {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 }
