@@ -1,6 +1,7 @@
 @use '../scss/mixins';
 
-form, .form {
+form,
+.form {
     margin-top: 3rem;
     @include mixins.flexCenter;
     gap: 2rem;
@@ -13,24 +14,26 @@ form, .form {
     //     gap: 4rem;
     //     margin: auto;
 
-        &__input {
-            border-bottom: 5px double #fbde9f;
-            padding: .5rem 1rem;
+    &__input {
+        border-bottom: 5px double #fbde9f;
+        padding: .5rem 1rem;
 
-            &::placeholder {
-                opacity: .3;
-            }
+        &::placeholder {
+            opacity: .3;
+            font-size: 2rem;
         }
+    }
 
-        &__select {
-            opacity: .5;
-            background: transparent;
-        }
+    &__select {
+        opacity: .5;
+        background: transparent;
+    }
 
-        &__button--del {
-            background: transparent;
-            cursor: pointer;
-        }
+    &__button--del {
+        background: transparent;
+        cursor: pointer;
+    }
+
     // }
 
     &__button {
@@ -39,16 +42,16 @@ form, .form {
         cursor: pointer;
 
         &--add {
-            & .plus{
-            width: fit-content;
-            display: inline-block;
-            text-align: center;
-            padding: .5rem;
-            background-color: #b7fce6;
-            border-radius: 50%;
-            line-height: 70%;
-            box-shadow: 3px 3px 5px #5f5f5f81;
-            transition: all .5s ease;
+            & .plus {
+                width: fit-content;
+                display: inline-block;
+                text-align: center;
+                padding: .5rem;
+                background-color: #b7fce6;
+                border-radius: 50%;
+                line-height: 70%;
+                box-shadow: 3px 3px 5px #5f5f5f81;
+                transition: all .5s ease;
 
                 &:hover {
                     transform: translateY(5rem) scale(1.3);
@@ -80,7 +83,7 @@ form, .form {
         &::placeholder {
             font-size: 1.5rem;
             opacity: .5;
-            padding:.5rem .5rem .5rem 1.5rem;
+            padding: .5rem .5rem .5rem 1.5rem;
         }
     }
 }

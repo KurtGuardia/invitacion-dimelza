@@ -26,10 +26,14 @@
         gap: 7rem;
         text-align: center;
 
-        & .fecha{
+        & .fecha {
             border: 7px double #ff971f;
             padding: .5rem;
-            font-size: 2rem
+            font-size: 2rem;
+
+            @include mixins.respond(tab-port) {
+                padding: 1.5rem;
+            }
         }
 
         & .nombres {
@@ -41,32 +45,50 @@
             text-align: center;
             margin-bottom: 8rem;
 
+            @include mixins.respond(tab-port) {
+                font-size: 5rem;
+
+                span {
+                    font-size: 5rem;
+                }
+            }
+
             & span {
                 transform: translateY(-2rem);
             }
         }
-
-
     }
 
-    & .flor{
+    & .flor {
         position: absolute;
         top: 0;
         right: 0;
         transform: scaleX(-1);
         width: 45%;
 
-        &.sec{
+        @include mixins.respond(tab-port) {
+            width: 30%;
+        }
+
+        @include mixins.respond(tab-land) {
+            width: 20%;
+        }
+
+        &.sec {
             transform: scaleX(-1) scaleY(-1) rotate(-88deg) translateY(-23px) translateX(-21px);
         }
     }
 
-    & .mancha{
+    & .mancha {
         position: absolute;
         top: 5rem;
         right: 7rem;
         transform: scaleX(-1);
         width: 200%;
+
+        @include mixins.respond(tab-land) {
+            right: 42rem;
+        }
     }
 
     & .conteo {
@@ -97,9 +119,15 @@
 
         & .dias {
             font-size: 1.3rem;
+
+            @include mixins.respond(tab-land) {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
         }
 
-        & .flor{
+        & .flor {
             top: unset;
             bottom: 0;
             left: 50%;
@@ -108,10 +136,14 @@
             height: 30%;
             opacity: .7;
 
-            &__left{
+            @include mixins.respond(tab-land) {
+                width: auto;
+                bottom: -1rem;
+            }
+
+            &__left {
                 left: 50%;
                 transform: scaleX(-1) translateY(5rem) translateX(100%);
-
             }
         }
     }
@@ -132,21 +164,58 @@
             margin: auto;
         }
 
-        & h3{
+        & h3 {
             transform: translateY(2rem)
         }
 
-        & .mancha{
+        & .mancha {
             left: 10rem;
             opacity: .4;
             z-index: -1;
+        }
+
+        & ul li .wap {
+            font-size: 1.2rem;
+            text-decoration: underline;
+            color: green;
+
+            @include mixins.respond(tab-port) {
+                font-size: 2rem;
+            }
         }
     }
 
     & .formulario {
         position: relative;
 
-        h3{
+        &__check {
+            @include mixins.flexCenter;
+            flex-direction: row;
+
+            & .square {
+                height: 2rem;
+                width: 2rem;
+                border: 1px solid black;
+
+                &-check {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: '✓';
+                        font-size: 2rem;
+                        top: -3px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            margin: 2rem 1rem;
+        }
+
+        p {
             margin: auto;
             width: fit-content
         }
@@ -155,7 +224,7 @@
             @include mixins.flexCenter;
         }
 
-        .mancha{
+        .mancha {
             top: 100%;
             transform: rotate(139deg) translateX(-41%) translateY(-8%);
             z-index: -1;

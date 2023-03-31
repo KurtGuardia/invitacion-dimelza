@@ -17,6 +17,14 @@ html {
         overflow: hidden;
         padding-bottom: 10rem;
         max-width: 1100px;
+
+        @include mixins.respond(tab-land) {
+            max-width: none;
+        }
+
+        @include mixins.respond(tab-port) {
+            padding: 20rem 12rem 0;
+        }
     }
 
     /* width */
@@ -46,8 +54,11 @@ html {
 
     p {
         font-size: 1.5rem;
-    }
 
+        @include mixins.respond(tab-port) {
+            font-size: 2.4rem;
+        }
+    }
 
     h3,
     h2,
@@ -61,12 +72,21 @@ html {
     h3 {
         font-size: 2rem;
         line-height: 3rem;
+
+        @include mixins.respond(tab-port) {
+            font-size: 3.4rem;
+            line-height: 4.2rem;
+        }
     }
 
     h2 {
         font-size: 5rem;
         font-style: italic;
         letter-spacing: 5px;
+
+        @include mixins.respond(tab-port) {
+            // font-size: 3.4rem;
+        }
     }
 
     a,
@@ -76,6 +96,10 @@ html {
         line-height: 5rem;
         color: inherit;
         font-size: 2rem;
+
+        @include mixins.respond(tab-port) {
+            font-size: 3rem;
+        }
     }
 
     button {
@@ -87,6 +111,10 @@ html {
     input,
     small {
         font-size: 2rem;
+
+        @include mixins.respond(tab-port) {
+            font-size: 3rem;
+        }
     }
 
 

@@ -21,7 +21,7 @@ $breakpoint argument choices:
 
 @mixin respond($breakpoint) {
     @if $breakpoint ==phone {
-        @media only screen and (max-width: 24.375em) {
+        @media only screen and (min-width: 24.375em) {
             @content;
         }
 
@@ -29,7 +29,7 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint ==big-phone {
-        @media only screen and (max-width: 30em) {
+        @media only screen and (min-width: 30em) {
             @content;
         }
 
@@ -37,7 +37,7 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint ==small-tab {
-        @media only screen and (max-width: 40em) {
+        @media only screen and (min-width: 40em) {
             @content;
         }
 
@@ -45,7 +45,7 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint ==tab-port {
-        @media only screen and (max-width: 48em) {
+        @media only screen and (min-width: 48em) {
             @content;
         }
 
@@ -53,7 +53,7 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint ==tab-land {
-        @media only screen and (max-width: 64em) {
+        @media only screen and (min-width: 64em) {
             @content;
         }
 

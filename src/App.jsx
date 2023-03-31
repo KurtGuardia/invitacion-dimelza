@@ -3,8 +3,15 @@ import Form from './componetns/Form'
 import Countdown from 'react-countdown'
 import flor from './img/FLORES.png'
 import mancha from './img/mancha.png'
+import { useState } from 'react'
 
 function App() {
+  const [showConfirm, setShowConfirm] = useState(false)
+
+  const handleShowConfirm = () => {
+    setShowConfirm(!showConfirm)
+  }
+
   return (
     <div className='App'>
       <main>
@@ -89,9 +96,18 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; <em>(precio especial)</em> Hotel
-                Castellano I <b>+34 923 22 85 16</b> <br />{' '}
-                (Reservar directamente con José Andrés)
+                &#8259; Hotel Castellano I{' '}
+                <em>(precio especial)</em> (Reservar
+                directamente con José Andrés &#9758; &nbsp;
+                <a
+                  className='wap'
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://wa.me/34685360189?text=Hola José Andrés! te escribo para la reserva del hotel para el matrimonio. '
+                >
+                  whatsapp
+                </a>
+                )
               </p>
             </li>
             <li>
@@ -136,9 +152,26 @@ function App() {
             className='mancha mancha__right'
           />
         </section>
+
         <section className='formulario'>
-          <h3>Confirma quienes vienen</h3>
-          <Form />
+          <div
+            className='formulario__check'
+            onClick={() => handleShowConfirm()}
+          >
+            {showConfirm === false && (
+              <div className='square' />
+            )}
+            {showConfirm === true && (
+              <div className='square square-check' />
+            )}
+            <h3>Confirmo mi asistencia</h3>
+          </div>
+          {showConfirm && (
+            <>
+              <p>Confirma quienes vienen:</p>
+              <Form />
+            </>
+          )}
           <img
             src={mancha}
             alt='flo'

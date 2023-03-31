@@ -2,27 +2,8 @@ import React from 'react'
 import './Form.scss'
 
 function MyForm() {
-  //     { name: '', email: '', allergies: '', menu: '' },
-  //   ])
-  //   const [message, setMessage] = useState('')
-
-  // const handleChange = (e, index) => {
-  //   const { name, value } = e.target
-  //   list[index][name] = value
-  // }
-
-  // const handleAddClick = () => {
-  //     { name: '', allergies: '', menu: '' },
-  //   ])
-  // }
-
-  // const handleRemoveClick = (index) => {
-  //   list.splice(index, 1)
-  // }
-
   return (
     <form method='POST' action='/success'>
-      {/* <div className='row'> */}
       <input
         type='hidden'
         value='confirmacion'
@@ -58,7 +39,6 @@ function MyForm() {
         type='text'
         placeholder='¿Alguien con alergias o intolerancias?'
       />
-      {/* </div> */}
 
       <textarea
         className='form__textarea'
