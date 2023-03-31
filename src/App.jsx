@@ -115,7 +115,7 @@ function App() {
               <p>
                 {' '}
                 &#8259; Hotel Helmantico{' '}
-                <em>(el más cercano a la finca)</em>
+                <em>(el más cercano a la finca) </em>
                 <b>+34 923 22 12 20</b>{' '}
                 <a href='https://hotelhelmantico.com/'>
                   🔗
