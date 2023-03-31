@@ -103,11 +103,23 @@ function App() {
                   className='wap'
                   target='_blank'
                   rel='noreferrer'
-                  href='https://wa.me/34685360189?text=Hola José Andrés! te escribo para la reserva del hotel para el matrimonio. '
+                  href='https://wa.me/34681048333?text=Hola José Andrés! te escribo para la reserva del hotel para el matrimonio. '
                 >
                   whatsapp
                 </a>
                 )
+              </p>
+            </li>
+            <li>
+              {' '}
+              <p>
+                {' '}
+                &#8259; Hotel Helmantico{' '}
+                <em>(el más cercano a la finca)</em>
+                <b>+34 923 22 12 20</b>{' '}
+                <a href='https://hotelhelmantico.com/'>
+                  🔗
+                </a>
               </p>
             </li>
             <li>
