@@ -76,8 +76,6 @@ function App() {
           >
             <h3>Finca Montecarmelos</h3>{' '}
           </a>
-
-          <p> Número: +34 675301055 📞</p>
           <iframe
             className='map'
             title='map'
@@ -89,6 +87,7 @@ function App() {
             loading='lazy'
             referrerPolicy='no-referrer-when-downgrade'
           />
+          <p>Hora: 13:30 ⌚</p>
           <h3>Alojamientos: 🏨</h3>
           <ul>
             {' '}
@@ -96,7 +95,7 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; Hotel Castellano I{' '}
+                &#8259; Hotel Castellano I &#9733; <br />
                 <em>(precio especial)</em> (Reservar
                 directamente con José Andrés &#9758; &nbsp;
                 <a
@@ -114,7 +113,8 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; Hotel Helmantico{' '}
+                &#8259; Hotel Helmantico &#9733; &#9733;
+                &#9733; <br />
                 <em>(el más cercano a la finca) </em>
                 <b>+34 923 22 12 20</b>{' '}
                 <a href='https://hotelhelmantico.com/'>
@@ -126,7 +126,7 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; Hotel Mercado{' '}
+                &#8259; Hotel Mercado &#9733; &#9733; <br />
                 <b>+34 923 72 00 15</b>{' '}
                 <a href='https://www.facebook.com/profile.php?id=100070928086294'>
                   🔗
@@ -137,7 +137,8 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; Hotel San Polo{' '}
+                &#8259; Hotel San Polo &#9733; &#9733;
+                &#9733; <br />
                 <b>+34 923 21 11 77</b>{' '}
                 <a href='https://www.hotelsanpolo.es/'>
                   🔗
@@ -148,7 +149,8 @@ function App() {
               {' '}
               <p>
                 {' '}
-                &#8259; Artheus Salamanca{' '}
+                &#8259; Artheus Salamanca &#9733; &#9733;
+                &#9733; &#9733; <br />
                 <b>+34 923 21 25 00</b>{' '}
                 <a href='https://www.facebook.com/hotelartheuscarmelitas'>
                   🔗

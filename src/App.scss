@@ -175,6 +175,10 @@
             z-index: -1;
         }
 
+        & ul li {
+            margin-bottom: 2rem;
+        }
+
         & ul li .wap {
             font-size: 1.2rem;
             text-decoration: underline;
